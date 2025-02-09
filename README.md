@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PokeDashboard
+## _The Simple PokeDex App with NextJs_
 
-## Getting Started
+PokeDashboard is a lightweight, responsive friendly, NextJS-powered pokedex app. You can browse all pokemons available from pokeapi.co in this app.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Browse all pokemons
+- Search specific pokemon
+- Filter, paginate and sort pokemon list
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tech
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+PokeDashboard uses a number of open source projects to work properly:
 
-## Learn More
+- [NextJS] - The new way of using react. Offering great optimization, SSR, SSG and synamic routing.
+- [PokeAPI] - the most complete, open source pokemon api in the entire universe!
+- [tailwind-css] - easy to use, extensive documentation, offering wide range of styling without doing it manually.
 
-To learn more about Next.js, take a look at the following resources:
+And of course PokeDashboard itself is open source with a public repository on GitHub.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Design Choice
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Upon designing, I realize that this should be simple and use as little as possible library, no need to use ui-library. I keep it simple by only using tailwind. I choose the color of _green_ and _slate_ from tailwind for main coloring theme. It is less contrast and can blend smoothly with the pokemon images. It also make the styling consistent across the component.
+In this app I need to fetch many images in one page, so I need a framework that provide image optimization on the go, without the need of using third-party library, that's why I use NextJs. It also allows me to use _dynamic routing_, _SSR_, _state management_ and I use _component-based architecture_ to split the code and reuse it in another component.
 
-## Deploy on Vercel
+## Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This app deployed in vercel.com, all production events will be maintaned and observed from versel dashboard. As I did not implement third-party logging service (_because this is jus a simple projects and I don't want to overcomplicated over things that can be done in simple way_) in this projects, the log will be observed through the vercel's log dashboard. 
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Why vercel you said? Actually, why you asked this question anyway, that's a bit rude man. Well, vercel offering _FREE_ deployment,  use Global CDN, Serverless Functions, Automatic Optimization and the dashboard provide all the infos you need. God bless vercel mania!
+
+## License
+
+MIT
+
+**Free Software, Hell Yeah!**
+
+[//]: # (Thanks dillinger.io for this markdown template, god bless you!)
