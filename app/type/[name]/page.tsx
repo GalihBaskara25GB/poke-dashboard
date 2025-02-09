@@ -4,7 +4,7 @@ import NotFound from '../not-found'
 import PokemonList from '@/components/PokemonList'
 
 interface TypeProps {
-    searchParams: {[key: string]: string | string[] | undefined},
+    searchParams: Promise<{[key: string]: string | string[] | undefined}>,
     params: {name: string}
   }
 

@@ -11,7 +11,7 @@ import { redirect } from "next/navigation";
 import NotFound from "@/app/not-found";
 
 interface PokemonListProps {
-    searchParams: {[key: string]: string | string[] | undefined},
+    searchParams: Promise<{[key: string]: string | string[] | undefined}>,
     filterByType: boolean,
     pokemonDataByType: any,
     selectedPokemonType: string
