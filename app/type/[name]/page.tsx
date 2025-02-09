@@ -5,7 +5,7 @@ import PokemonList from '@/components/PokemonList'
 
 interface TypeProps {
     searchParams: Promise<{[key: string]: string | string[] | undefined}>,
-    params: {name: string}
+    params: Promise<{name: string}>
   }
 
 const Type = async ({searchParams, params} : TypeProps) => {

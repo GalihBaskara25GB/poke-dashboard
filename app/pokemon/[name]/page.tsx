@@ -3,7 +3,11 @@ import { getPokemonByName } from '@/lib/pokeapi'
 import React from 'react'
 import NotFound from '../not-found'
 
-const Pokemon = async ({params} : {params: {name: string}}) => {
+interface PokemonProps {
+    params: Promise<{name: string}>
+}
+
+const Pokemon = async ({params} : PokemonProps) => {
     const { name } = await params
     const pokemonData = await getPokemonByName(name)
 
